@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e1689b0d-48e5-4d03-8235-e5b5431497f0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7292/ServiceHEL.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceHEL.disco" MetadataType="Disco" ID="ce640e90-7f0c-4407-90ce-aea63ff2bccc" SourceId="1" SourceUrl="http://localhost:7292/ServiceHEL.svc?disco" />
+    <MetadataFile FileName="ServiceHEL.xsd" MetadataType="Schema" ID="31668017-2d5c-4a3b-8036-1be947f8ab60" SourceId="1" SourceUrl="http://localhost:7292/ServiceHEL.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceHEL1.xsd" MetadataType="Schema" ID="11f9d5ac-a8f7-4d14-997c-6517c691de4d" SourceId="1" SourceUrl="http://localhost:7292/ServiceHEL.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceHEL2.xsd" MetadataType="Schema" ID="84f8b4f3-ecb4-49c1-9d9f-b5339cf5964f" SourceId="1" SourceUrl="http://localhost:7292/ServiceHEL.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceHEL.wsdl" MetadataType="Wsdl" ID="ddc031aa-0d57-4e5f-85b6-1276a4a3975b" SourceId="1" SourceUrl="http://localhost:7292/ServiceHEL.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

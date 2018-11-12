@@ -28,13 +28,71 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
+			this.BtnHello = new System.Windows.Forms.Button();
+			this.LblID = new System.Windows.Forms.Label();
+			this.TBID = new System.Windows.Forms.TextBox();
+			this.buttonBtnPersonneByID2 = new System.Windows.Forms.Button();
+			this.SuspendLayout();
+			// 
+			// BtnHello
+			// 
+			this.BtnHello.Location = new System.Drawing.Point(12, 12);
+			this.BtnHello.Name = "BtnHello";
+			this.BtnHello.Size = new System.Drawing.Size(100, 23);
+			this.BtnHello.TabIndex = 0;
+			this.BtnHello.Text = "Hello !";
+			this.BtnHello.UseVisualStyleBackColor = true;
+			this.BtnHello.Click += new System.EventHandler(this.BtnHello_Click);
+			// 
+			// LblID
+			// 
+			this.LblID.AutoSize = true;
+			this.LblID.Location = new System.Drawing.Point(12, 38);
+			this.LblID.Name = "LblID";
+			this.LblID.Size = new System.Drawing.Size(100, 13);
+			this.LblID.TabIndex = 1;
+			this.LblID.Text = "Identifiant personne";
+			// 
+			// TBID
+			// 
+			this.TBID.Location = new System.Drawing.Point(12, 54);
+			this.TBID.Name = "TBID";
+			this.TBID.Size = new System.Drawing.Size(100, 20);
+			this.TBID.TabIndex = 2;
+			this.TBID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// buttonBtnPersonneByID2
+			// 
+			this.buttonBtnPersonneByID2.Location = new System.Drawing.Point(12, 80);
+			this.buttonBtnPersonneByID2.Name = "buttonBtnPersonneByID2";
+			this.buttonBtnPersonneByID2.Size = new System.Drawing.Size(100, 23);
+			this.buttonBtnPersonneByID2.TabIndex = 3;
+			this.buttonBtnPersonneByID2.Text = "Chercher";
+			this.buttonBtnPersonneByID2.UseVisualStyleBackColor = true;
+			this.buttonBtnPersonneByID2.Click += new System.EventHandler(this.buttonBtnPersonneByID2_Click);
+			// 
+			// Form1
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(126, 122);
+			this.Controls.Add(this.buttonBtnPersonneByID2);
+			this.Controls.Add(this.TBID);
+			this.Controls.Add(this.LblID);
+			this.Controls.Add(this.BtnHello);
+			this.Name = "Form1";
 			this.Text = "Form1";
+			this.ResumeLayout(false);
+			this.PerformLayout();
+
 		}
 
 		#endregion
+
+		private System.Windows.Forms.Button BtnHello;
+		private System.Windows.Forms.Label LblID;
+		private System.Windows.Forms.TextBox TBID;
+		private System.Windows.Forms.Button buttonBtnPersonneByID2;
 	}
 }
 
