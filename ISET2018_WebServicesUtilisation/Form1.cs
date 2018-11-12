@@ -52,6 +52,8 @@ namespace ISET2018_WebServicesUtilisation
 					else
 						MessageBox.Show("Le code entré est invalide");
 				}
+				else
+					MessageBox.Show("L'entrée n'est pas un code ISBN-13");
 			}
 		}
 
@@ -77,6 +79,15 @@ namespace ISET2018_WebServicesUtilisation
 				return true;
 			else
 				return false;
+		}
+
+		private void BtnVerifLog_Click(object sender, EventArgs e)
+		{
+			UtiliserServiceHEL.ServiceHELClient s = new UtiliserServiceHEL.ServiceHELClient();
+			if (s.TryLogin(TBLogNom.Text.Trim(), TBLogPass.Text.Trim()))
+				MessageBox.Show("Login OK");
+			else
+				MessageBox.Show("Vos indentifiants sont invalides");
 		}
 	}
 }

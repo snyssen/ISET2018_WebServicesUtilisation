@@ -25,6 +25,12 @@
   <wsdl:message name="IServiceHEL_GetPersonneByID_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetPersonneByIDResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceHEL_TryLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:TryLogin" />
+  </wsdl:message>
+  <wsdl:message name="IServiceHEL_TryLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TryLoginResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServiceHEL">
     <wsdl:operation name="HelloWorld">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceHEL/HelloWorld" message="tns:IServiceHEL_HelloWorld_InputMessage" />
@@ -37,6 +43,10 @@
     <wsdl:operation name="GetPersonneByID">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceHEL/GetPersonneByID" message="tns:IServiceHEL_GetPersonneByID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceHEL/GetPersonneByIDResponse" message="tns:IServiceHEL_GetPersonneByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TryLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceHEL/TryLogin" message="tns:IServiceHEL_TryLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceHEL/TryLoginResponse" message="tns:IServiceHEL_TryLogin_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceHEL" type="tns:IServiceHEL">
@@ -61,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetPersonneByID">
       <soap:operation soapAction="http://tempuri.org/IServiceHEL/GetPersonneByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryLogin">
+      <soap:operation soapAction="http://tempuri.org/IServiceHEL/TryLogin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

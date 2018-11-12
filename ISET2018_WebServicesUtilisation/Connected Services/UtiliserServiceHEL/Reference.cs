@@ -172,6 +172,12 @@ namespace ISET2018_WebServicesUtilisation.UtiliserServiceHEL {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceHEL/GetPersonneByID", ReplyAction="http://tempuri.org/IServiceHEL/GetPersonneByIDResponse")]
         System.Threading.Tasks.Task<ISET2018_WebServicesUtilisation.UtiliserServiceHEL.WS_Personne> GetPersonneByIDAsync(int nID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceHEL/TryLogin", ReplyAction="http://tempuri.org/IServiceHEL/TryLoginResponse")]
+        bool TryLogin(string nom, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceHEL/TryLogin", ReplyAction="http://tempuri.org/IServiceHEL/TryLoginResponse")]
+        System.Threading.Tasks.Task<bool> TryLoginAsync(string nom, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -223,6 +229,14 @@ namespace ISET2018_WebServicesUtilisation.UtiliserServiceHEL {
         
         public System.Threading.Tasks.Task<ISET2018_WebServicesUtilisation.UtiliserServiceHEL.WS_Personne> GetPersonneByIDAsync(int nID) {
             return base.Channel.GetPersonneByIDAsync(nID);
+        }
+        
+        public bool TryLogin(string nom, string password) {
+            return base.Channel.TryLogin(nom, password);
+        }
+        
+        public System.Threading.Tasks.Task<bool> TryLoginAsync(string nom, string password) {
+            return base.Channel.TryLoginAsync(nom, password);
         }
     }
 }

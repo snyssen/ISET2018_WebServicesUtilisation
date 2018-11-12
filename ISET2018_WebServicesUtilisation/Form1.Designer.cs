@@ -35,7 +35,14 @@
 			this.TBVerfifSBN = new System.Windows.Forms.Button();
 			this.TBISBN = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.TBLogNom = new System.Windows.Forms.TextBox();
+			this.BtnVerifLog = new System.Windows.Forms.Button();
+			this.TBLogPass = new System.Windows.Forms.TextBox();
+			this.LblNom = new System.Windows.Forms.Label();
+			this.LblPassword = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
+			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// BtnHello
@@ -99,16 +106,75 @@
 			this.groupBox1.Controls.Add(this.TBVerfifSBN);
 			this.groupBox1.Location = new System.Drawing.Point(0, 109);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(127, 105);
+			this.groupBox1.Size = new System.Drawing.Size(127, 80);
 			this.groupBox1.TabIndex = 6;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "ISBN checker";
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.LblPassword);
+			this.groupBox2.Controls.Add(this.LblNom);
+			this.groupBox2.Controls.Add(this.TBLogPass);
+			this.groupBox2.Controls.Add(this.TBLogNom);
+			this.groupBox2.Controls.Add(this.BtnVerifLog);
+			this.groupBox2.Location = new System.Drawing.Point(0, 187);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(127, 127);
+			this.groupBox2.TabIndex = 7;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Login";
+			// 
+			// TBLogNom
+			// 
+			this.TBLogNom.Location = new System.Drawing.Point(12, 32);
+			this.TBLogNom.Name = "TBLogNom";
+			this.TBLogNom.Size = new System.Drawing.Size(100, 20);
+			this.TBLogNom.TabIndex = 4;
+			this.TBLogNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// BtnVerifLog
+			// 
+			this.BtnVerifLog.Location = new System.Drawing.Point(12, 95);
+			this.BtnVerifLog.Name = "BtnVerifLog";
+			this.BtnVerifLog.Size = new System.Drawing.Size(100, 23);
+			this.BtnVerifLog.TabIndex = 5;
+			this.BtnVerifLog.Text = "Vérifier";
+			this.BtnVerifLog.UseVisualStyleBackColor = true;
+			this.BtnVerifLog.Click += new System.EventHandler(this.BtnVerifLog_Click);
+			// 
+			// TBLogPass
+			// 
+			this.TBLogPass.Location = new System.Drawing.Point(12, 69);
+			this.TBLogPass.Name = "TBLogPass";
+			this.TBLogPass.Size = new System.Drawing.Size(100, 20);
+			this.TBLogPass.TabIndex = 6;
+			this.TBLogPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// LblNom
+			// 
+			this.LblNom.AutoSize = true;
+			this.LblNom.Location = new System.Drawing.Point(9, 16);
+			this.LblNom.Name = "LblNom";
+			this.LblNom.Size = new System.Drawing.Size(29, 13);
+			this.LblNom.TabIndex = 8;
+			this.LblNom.Text = "Nom";
+			// 
+			// LblPassword
+			// 
+			this.LblPassword.AutoSize = true;
+			this.LblPassword.Location = new System.Drawing.Point(12, 55);
+			this.LblPassword.Name = "LblPassword";
+			this.LblPassword.Size = new System.Drawing.Size(71, 13);
+			this.LblPassword.TabIndex = 9;
+			this.LblPassword.Text = "Mot de passe";
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(126, 212);
+			this.ClientSize = new System.Drawing.Size(126, 313);
+			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.buttonBtnPersonneByID2);
 			this.Controls.Add(this.TBID);
@@ -118,6 +184,8 @@
 			this.Text = "Form1";
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
+			this.groupBox2.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -132,6 +200,12 @@
 		private System.Windows.Forms.Button TBVerfifSBN;
 		private System.Windows.Forms.TextBox TBISBN;
 		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.Label LblPassword;
+		private System.Windows.Forms.Label LblNom;
+		private System.Windows.Forms.TextBox TBLogPass;
+		private System.Windows.Forms.TextBox TBLogNom;
+		private System.Windows.Forms.Button BtnVerifLog;
 	}
 }
 
