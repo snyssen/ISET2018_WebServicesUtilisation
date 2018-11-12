@@ -32,6 +32,10 @@
 			this.LblID = new System.Windows.Forms.Label();
 			this.TBID = new System.Windows.Forms.TextBox();
 			this.buttonBtnPersonneByID2 = new System.Windows.Forms.Button();
+			this.TBVerfifSBN = new System.Windows.Forms.Button();
+			this.TBISBN = new System.Windows.Forms.TextBox();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// BtnHello
@@ -71,17 +75,49 @@
 			this.buttonBtnPersonneByID2.UseVisualStyleBackColor = true;
 			this.buttonBtnPersonneByID2.Click += new System.EventHandler(this.buttonBtnPersonneByID2_Click);
 			// 
+			// TBVerfifSBN
+			// 
+			this.TBVerfifSBN.Location = new System.Drawing.Point(12, 49);
+			this.TBVerfifSBN.Name = "TBVerfifSBN";
+			this.TBVerfifSBN.Size = new System.Drawing.Size(100, 23);
+			this.TBVerfifSBN.TabIndex = 5;
+			this.TBVerfifSBN.Text = "Vérifier";
+			this.TBVerfifSBN.UseVisualStyleBackColor = true;
+			this.TBVerfifSBN.Click += new System.EventHandler(this.TBVerfifSBN_Click);
+			// 
+			// TBISBN
+			// 
+			this.TBISBN.Location = new System.Drawing.Point(12, 23);
+			this.TBISBN.Name = "TBISBN";
+			this.TBISBN.Size = new System.Drawing.Size(100, 20);
+			this.TBISBN.TabIndex = 4;
+			this.TBISBN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.TBISBN);
+			this.groupBox1.Controls.Add(this.TBVerfifSBN);
+			this.groupBox1.Location = new System.Drawing.Point(0, 109);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(127, 105);
+			this.groupBox1.TabIndex = 6;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "ISBN checker";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(126, 122);
+			this.ClientSize = new System.Drawing.Size(126, 212);
+			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.buttonBtnPersonneByID2);
 			this.Controls.Add(this.TBID);
 			this.Controls.Add(this.LblID);
 			this.Controls.Add(this.BtnHello);
 			this.Name = "Form1";
 			this.Text = "Form1";
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -93,6 +129,9 @@
 		private System.Windows.Forms.Label LblID;
 		private System.Windows.Forms.TextBox TBID;
 		private System.Windows.Forms.Button buttonBtnPersonneByID2;
+		private System.Windows.Forms.Button TBVerfifSBN;
+		private System.Windows.Forms.TextBox TBISBN;
+		private System.Windows.Forms.GroupBox groupBox1;
 	}
 }
 

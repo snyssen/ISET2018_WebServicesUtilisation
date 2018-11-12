@@ -37,5 +37,46 @@ namespace ISET2018_WebServicesUtilisation
 			else
 				MessageBox.Show("ID invalide");
 		}
+
+		private void TBVerfifSBN_Click(object sender, EventArgs e)
+		{
+			string sISBN = TBISBN.Text.Trim();
+			if (sISBN.Length > 0)
+			{
+				sISBN = sISBN.Replace("-", "");
+				if (UInt64.TryParse(sISBN, out UInt64 whatev) && sISBN.Length == 13) // On a bien un nombre de 13 chiffres
+				{
+					char[] tabISBN = sISBN.ToCharArray();
+					if (CheckISBNChar(tabISBN))
+						MessageBox.Show("Le code entré est valide");
+					else
+						MessageBox.Show("Le code entré est invalide");
+				}
+			}
+		}
+
+		// retourne vrai si l'ISBN est valide. le tabchar entré doit être un nombre de 13 chiffres
+		private bool CheckISBNChar(char[] tabISBN)
+		{
+			int r = 0;
+			for (int i = 0; i < 12; i++)
+			{
+				if (i % 2 == 0) // char pair
+				{
+					r += int.Parse(tabISBN[i].ToString());
+				}
+				else // char impair
+				{
+					r += int.Parse(tabISBN[i].ToString()) * 3;
+				}
+			}
+			r = 10 - (r % 10);
+			if (r == 10)
+				r = 0;
+			if (int.Parse(tabISBN[12].ToString()) == r)
+				return true;
+			else
+				return false;
+		}
 	}
 }
